@@ -1,20 +1,43 @@
-#container {
+* {
+    margin: 20;
+    padding: 0;
+}
+
+body {
     display: flex;
-    padding: auto;
-    width: 832px;
-    height: 832px;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+#button-container {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    margin: 10px 20px;
+    display: block;
+    padding: 10px 20px;
+}
+
+#sketch-container {
+    display: flex;
+    width: 700px;
+    height: 650px;
     flex-wrap: wrap;
     border: black solid 1px;
+    justify-content: center;
+    background-color: white;
 }
 
-.square {
+.column {
     display: flex;
-    border: black solid 1px;
-    height: 50px;
-    width: 50px;
-    flex-shrink: 0;
+    flex: 1 0 auto;
+    flex-direction: column;
 }
 
-.square:hover {
-    background-color: cadetblue;
+.row {
+    flex: 1;
 }
