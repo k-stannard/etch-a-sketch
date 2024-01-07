@@ -1,6 +1,9 @@
 const grid = document.getElementById('sketch-container')
 const gridSizeButton = document.getElementById('btn')
-const colorBoxBlack = event => event.target.style.backgroundColor = "black"
+const draw = document.getElementById('btn-draw')
+const eraser = document.getElementById('btn-erase')
+
+let activeColor = event => event.target.style.backgroundColor = "black"
 
 function createGrid(size) {
     for(let i = 0; i < size; i++) {
@@ -42,9 +45,17 @@ function resetGrid(size = 16) {
     grid.style.backgroundColor = "white"
 }
 
+draw.addEventListener('click', function() {
+    activeColor = event => event.target.style.backgroundColor = "black"
+})
+
+eraser.addEventListener('click', function() {
+    activeColor = event => event.target.style.backgroundColor = "white"
+})
+
 grid.addEventListener('mouseenter', function() {
-    grid.addEventListener('mousedown', colorBoxBlack)
+    grid.addEventListener('mousedown', activeColor)
     grid.addEventListener('mouseover', event => {
-        if(event.buttons == 1) colorBoxBlack(event)
+        if(event.buttons == 1) activeColor(event)
     })
 }, false)
