@@ -6,15 +6,24 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <div id="button-container">
-        <button id="btn-draw">Draw Pen</button>
-        <button id="btn-erase">Eraser</button>
-        <button id="btn-rainbow">Rainbow Pen</button>
-        <button id="btn-reset" onclick="resetGrid()">Reset Grid</button>
-        <button id="btn-size" onclick="changeGridSize()">Change Grid Size</button>
-    </div>
+    <div>
+        <header>
+            <h1>Etch-a-Sketch</h1>
+        </header>
+        
     
-    <div id="sketch-container"></div>
+        <div id="container">
+            <div id="button-container">
+                <button id="btn-draw" autofocus>Draw Pen</button>
+                <button id="btn-erase">Eraser</button>
+                <button id="btn-rainbow">Rainbow Pen</button>
+                <button id="btn-reset" onclick="resetGrid()">Reset Grid</button>
+                <button id="btn-size" onclick="changeGridSize()">Change Grid Size</button>
+            </div>
+            
+            <div id="sketch-container"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

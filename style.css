@@ -6,7 +6,18 @@
 body {
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 15px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
 }
 
 #button-container {
