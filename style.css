@@ -30,7 +30,7 @@ button {
     flex-wrap: wrap;
     border: black solid 1px;
     justify-content: center;
-    background-color: white;
+    background-color: transparent !important;
 }
 
 .column {

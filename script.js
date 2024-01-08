@@ -2,8 +2,13 @@ const grid = document.getElementById('sketch-container')
 const gridSizeButton = document.getElementById('btn')
 const draw = document.getElementById('btn-draw')
 const eraser = document.getElementById('btn-erase')
+const rainbowPen = document.getElementById('btn-rainbow')
 
 let activeColor = event => event.target.style.backgroundColor = "black"
+
+const randomInt = function() {
+    return Math.floor(Math.random() * (255 + 1))
+}
 
 function createGrid(size) {
     for(let i = 0; i < size; i++) {
@@ -51,6 +56,10 @@ draw.addEventListener('click', function() {
 
 eraser.addEventListener('click', function() {
     activeColor = event => event.target.style.backgroundColor = "white"
+})
+
+rainbowPen.addEventListener('click', function() {
+    activeColor = event => event.target.style.backgroundColor = `rgb(${randomInt()}, ${randomInt()}, ${randomInt()})`
 })
 
 grid.addEventListener('mouseenter', function() {
