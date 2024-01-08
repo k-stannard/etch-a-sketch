@@ -34,6 +34,11 @@ button {
     user-select: none;
 }
 
+.active, button:hover {
+    border: rgb(0, 95, 204) solid 2px;
+    border-radius: 4px;
+}
+
 #sketch-container {
     display: flex;
     width: 700px;

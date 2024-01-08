@@ -50,6 +50,14 @@ function resetGrid(size = 16) {
     grid.style.backgroundColor = "white"
 }
 
+let buttons = document.querySelectorAll('.draw')
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'))
+        btn.classList.add('active')
+    })
+})
+
 draw.addEventListener('click', function() {
     activeColor = event => event.target.style.backgroundColor = "black"
 })
